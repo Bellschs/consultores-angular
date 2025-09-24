@@ -1,0 +1,123 @@
+.consultores-container {
+  max-width: 1000px;  
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.filtro {
+  margin: 20px 0;
+  text-align: left;
+
+  label {
+    font-weight: 500;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  select {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: #4da3ff;
+      box-shadow: 0 0 4px rgba(77, 163, 255, 0.5);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #1e90ff;
+      box-shadow: 0 0 6px rgba(30, 144, 255, 0.6);
+    }
+  }
+}
+
+.consultores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* ✅ Botão "Novo Consultor" */
+.novo-btn {
+  margin-bottom: 20px;
+  text-align: right;
+
+  .btn-novo {
+    background: #28a745;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #218838;
+    }
+  }
+}
+
+/* ✅ Botões de ação (Editar / Excluir) */
+.acoes-admin {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+
+  .btn-editar {
+    background: #ffc107;
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    &:hover {
+      background: #e0a800;
+    }
+  }
+
+  .btn-excluir {
+    background: #dc3545;
+    color: #fff;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+      background: #c82333;
+    }
+  }
+}
+.novo-btn {
+  text-align: right;
+  margin: 10px 0 20px;
+}
+
+.btn-adicionar {
+  display: inline-block;
+  background: #28a745;  
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-adicionar:hover {
+  background: #218838;   
+}

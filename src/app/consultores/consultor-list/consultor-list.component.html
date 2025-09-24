@@ -1,0 +1,27 @@
+<div class="consultores-container">
+  <header>
+    <h1>{{ nomeDaEmpresa }}</h1>
+    <p>Conheça nossos especialistas</p>
+  </header>
+
+ 
+  <div *ngIf="isAdmin" class="novo-btn">
+    <a routerLink="/consultores/novo" class="btn-adicionar">+ Novo Consultor</a>
+  </div>
+
+  <section class="filtro">
+    <label for="especialidade">Filtrar por especialidade:</label>
+    <select id="especialidade" [(ngModel)]="filtroArea" (change)="filtrar()">
+      <option value="">Todos</option>
+      <option *ngFor="let area of especialidades" [value]="area">
+        {{ area }}
+      </option>
+    </select>
+  </section>
+
+  <section class="consultores">
+    <div *ngFor="let consultor of consultoresFiltrados" class="consultor-item">
+      <app-consultor [consultor]="consultor"></app-consultor>
+    </div>
+  </section>
+</div>

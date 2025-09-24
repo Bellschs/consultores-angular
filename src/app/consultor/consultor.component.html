@@ -1,0 +1,10 @@
+<section class="consultor-card" *ngIf="consultor">
+  <h2>{{ consultor.nome }}</h2>
+
+  <div class="consultor-details">
+    <p class="especialidade">{{ consultor.especialidade }}</p>
+    <p *ngIf="consultor.email">📧 {{ consultor.email }}</p>
+  </div>
+
+  <a [routerLink]="['/consultor', consultor.id]" class="btn-detalhes">Ver detalhes</a>
+</section>

@@ -1,0 +1,51 @@
+<div class="form-container">
+  <h2 *ngIf="!editMode">Novo Consultor</h2>
+  <h2 *ngIf="editMode">Editar Consultor</h2>
+
+  <form [formGroup]="form" (ngSubmit)="salvar()" class="consultor-form">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input id="nome" type="text" formControlName="nome" placeholder="Digite o nome" required />
+    </div>
+
+    <div class="form-group">
+      <label for="especialidade">Especialidade:</label>
+      <input id="especialidade" type="text" formControlName="especialidade" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input id="email" type="email" formControlName="email" />
+    </div>
+
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input id="telefone" type="text" formControlName="telefone" />
+    </div>
+
+    <div class="form-group">
+      <label for="cidade">Cidade:</label>
+      <input id="cidade" type="text" formControlName="cidade" />
+    </div>
+
+    <div class="form-group">
+      <label for="anosExperiencia">Anos de Experiência:</label>
+      <input id="anosExperiencia" type="number" formControlName="anosExperiencia" />
+    </div>
+
+    <div class="form-group">
+      <label for="habilidades">Habilidades (separe por vírgula):</label>
+      <input id="habilidades" type="text" formControlName="habilidades" placeholder="Ex: Angular, TypeScript, RxJS" />
+    </div>
+
+    <div class="form-group">
+      <label for="bio">Biografia:</label>
+      <textarea id="bio" formControlName="bio" rows="3"></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn salvar">Salvar</button>
+      <button type="button" class="btn cancelar" (click)="cancelar()">Cancelar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,59 @@
+.sobre-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sobre-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sobre-container .intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.sobre-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #444;
+}
+
+.perfis {
+  list-style: none;
+  padding: 0;
+}
+
+.perfis li {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border-left: 5px solid #ccc;
+}
+
+.perfis li .papel {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.perfis li .papel.admin {
+  color: #d9534f;
+}
+
+.perfis li .papel.user {
+  color: #0275d8;
+}
+
+.perfis li p {
+  margin: 0;
+  color: #555;
+}

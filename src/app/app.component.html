@@ -1,0 +1,12 @@
+<nav class="menu">
+  <a *ngIf="!auth.isAuthenticated()" routerLink="/login" routerLinkActive="active">Login</a>
+  <a *ngIf="auth.isAuthenticated()" routerLink="/consultores" routerLinkActive="active">Consultores</a>
+  <a routerLink="/sobre" routerLinkActive="active">Sobre</a>
+
+  <span *ngIf="auth.isAuthenticated()" class="user-info">
+    Usuário: {{ auth.getUserRole() }}
+    <button (click)="logout()">Sair</button>
+  </span>
+</nav>
+
+<router-outlet></router-outlet>
